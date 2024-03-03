@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Papayaninolan"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Papayaninolan" Height="768" Width="1024">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="250"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0" Grid.Column="0" Content="Menu" Background="AliceBlue" Grid.ColumnSpan="3"/>
+        
+<!-- Player Information-->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Player Stats" Background="AntiqueWhite"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Player Image" Background="AntiqueWhite"/>
+        </Grid>
 
+   
+        <Label Grid.Row="2" Grid.Column="0" Content="Inventory and Quests" Background="Aqua"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Game Messages" Background="Aquamarine"/>
+        
+        <!-- Item and Action buttons-->
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Item Image" Background="Bisque"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Item Buttons" Background="Bisque"/>
+        </Grid>
+
+        <!-- Location and Enemy Information-->
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Location Information" Background="Azure"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Enemy Information" Background="Azure"/>
+        </Grid>
+
+  
+        <Label Grid.Row="2" Grid.Column="2" Content="Navigation Buttons" Background="Beige"/>
     </Grid>
 </Window>
