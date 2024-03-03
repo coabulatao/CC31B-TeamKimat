@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Engine.ViewModels;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,15 +10,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Papayaninolan;
+namespace PapayaGame;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
+    private GameSession _gamesession;
     public MainWindow()
     {
         InitializeComponent();
+        _gamesession = new GameSession();
+        DataContext = _gamesession;
     }
 }

@@ -1,60 +1,92 @@
-﻿<Window x:Class="Papayaninolan.MainWindow"
+﻿ ﻿<Window x:Class="PapayaGame.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Papayaninolan"
+        xmlns:local="clr-namespace:PapayaGame"
         mc:Ignorable="d"
-        Title="Papayaninolan" Height="768" Width="1024">
+        Title="PapayaGame" Height="768" Width="1024">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="250"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
-        
-        <Label Grid.Row="0" Grid.Column="0" Content="Menu" Background="AliceBlue" Grid.ColumnSpan="3"/>
-        
-<!-- Player Information-->
+
+
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Menu" Background="#EDECE8"/>
+
+        <!-- Player Info -->
         <Grid Grid.Row="1" Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Player Stats" Background="AntiqueWhite"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Player Image" Background="AntiqueWhite"/>
+
+            <!-- Player Stats -->
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Class:"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="HitPoints:"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="Gold:"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Exp:"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Level:"/>
+                <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="{Binding CurrentPlayer.CharacterClass}"/>
+                <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}"/>
+                <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
+                <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.ExperiencePoints}"/>
+                <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Player Image" Background="#FBF7B1"/>
         </Grid>
 
-   
-        <Label Grid.Row="2" Grid.Column="0" Content="Inventory and Quests" Background="Aqua"/>
-        <Label Grid.Row="1" Grid.Column="1" Content="Game Messages" Background="Aquamarine"/>
-        
-        <!-- Item and Action buttons-->
+        <Label Grid.Row="2" Grid.Column="0" Content="Inventory and Quest" Background="#EDBF85"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Game Messages" Background="#D1CA98"/>
+
+        <!-- Item and Action Buttons -->
         <Grid Grid.Row="2" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Item Image" Background="Bisque"/>
-            <Label Grid.Row="0" Grid.Column="1" Content="Item Buttons" Background="Bisque"/>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Item Image" Background="#B7B3A1"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Item Buttons" Background="#D3D0C5"/>
+
         </Grid>
 
-        <!-- Location and Enemy Information-->
+        <!-- Location And Enemy Info -->
         <Grid Grid.Row="1" Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Location Information" Background="Azure"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Enemy Information" Background="Azure"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Location Information" Background="#DFDBB9"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Enemy Information" Background="#F4D9B8"/>
         </Grid>
 
-  
-        <Label Grid.Row="2" Grid.Column="2" Content="Navigation Buttons" Background="Beige"/>
+        <Label Grid.Row="2" Grid.Column="2" Content="Navigation Buttons" Background="#FCF9C5"/>
     </Grid>
 </Window>
