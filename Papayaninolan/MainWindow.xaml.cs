@@ -1,4 +1,4 @@
-﻿using Engine.ViewModels;
+using Engine.ViewModels;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,5 +23,21 @@ public partial class MainWindow : Window
         InitializeComponent();
         _gamesession = new GameSession();
         DataContext = _gamesession;
+    }
+    private void OnClick_MoveNorth(object sender, RoutedEventArgs e)
+    {
+        _gamesession.MoveNorth();
+    }
+    private void OnClick_MoveWest(object sender, RoutedEventArgs e)
+    {
+        _gamesession.MoveWest();
+    }
+    private void OnClick_MoveEast(object sender, RoutedEventArgs e)
+    {
+        _gamesession.MoveEast();
+    }
+    private void OnClick_MoveSouth(object sender, RoutedEventArgs e)
+    {
+        _gamesession.MoveSouth();
     }
 }
