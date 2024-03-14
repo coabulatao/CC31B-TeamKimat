@@ -11,7 +11,7 @@ namespace Engine.Factories
     {
         internal World CreatWorld()
         {
-             World newWorld = new World();
+            World newWorld = new();
 
             newWorld.AddLocation(0, 0,
                 "Papaya Grove",
